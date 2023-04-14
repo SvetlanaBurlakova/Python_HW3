@@ -24,8 +24,8 @@ elif x == min(arr) == max(arr):
 else:
     for i in range(len(arr)): # создаю массив разницы между числом массива и введенным числом по модулю
         diff[i]=abs(arr[i] - x)
-    for i in range(len(diff)): # если в массиве есть искомое число, заменяю его на макимальное число + 1
-        if diff[i] == 0:
+    for i in range(len(diff)): # если в массиве есть искомое число, заменяю его на макимально возможное число + 1
+        if diff[i] == 0:        
             diff[i] = len(arr) + 1
     for i in range(len(arr)): # создаю результирующий массив, содержащий значения из исходного массива, самые близкие к искомому значению
         if diff[i] == min(diff) and diff[i] != (len(arr) + 1) and arr[i] not in result:
